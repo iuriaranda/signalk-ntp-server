@@ -7,9 +7,17 @@
   },
   "author": "Iuri Aranda <iuri.aranda@gmail.com>",
   "license": "MIT",
-  "description": "Starts an NTP server that serves the current time based on the SignalK datetime value at the specified path. If the datetime value is older than the specified maximum time delta, the current server time is provided instead.",
+  "description": "NTP server from SignalK time sources (e.g. GPS).",
   "keywords": [
     "signalk-node-server-plugin",
     "signalk-category-utility"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iuriaranda/signalk-ntp-server"
+  },
+  "bugs": {
+    "url": "https://github.com/iuriaranda/signalk-ntp-server/issues"
+  },
+  "homepage": "https://github.com/iuriaranda/signalk-ntp-server"
 }

@@ -5,7 +5,7 @@ module.exports = function (app) {
 
   plugin.id = 'signalk-ntp-server';
   plugin.name = 'NTP Server';
-  plugin.description = 'Starts an NTP server that serves the current time based on the SignalK datetime value at the specified path. If the datetime value is older than the specified maximum time delta, the current server time is provided instead.';
+  plugin.description = 'Starts an NTP server that serves the current time based on the SignalK datetime value at the specified path. If the data in the specified SignalK path is considered stale, the current server time is provided instead.';
 
   plugin.schema = {
     title: 'SignalK NTP server',
