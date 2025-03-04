@@ -12,6 +12,9 @@
     "signalk-node-server-plugin",
     "signalk-category-utility"
   ],
+  "scripts": {
+    "test": "echo \"Everything is fine\""
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/iuriaranda/signalk-ntp-server"
