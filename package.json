@@ -1,0 +1,15 @@
+{
+  "name": "signalk-ntp-server",
+  "version": "1.0.1",
+  "main": "index.js",
+  "dependencies": {
+    "ntp-time": "2.0.6"
+  },
+  "author": "Iuri Aranda <iuri.aranda@gmail.com>",
+  "license": "MIT",
+  "description": "Starts an NTP server that serves the current time based on the SignalK datetime value at the specified path. If the datetime value is older than the specified maximum time delta, the current server time is provided instead.",
+  "keywords": [
+    "signalk-node-server-plugin",
+    "signalk-category-utility"
+  ]
+}

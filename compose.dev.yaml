@@ -1,0 +1,37 @@
+version: "3"
+services:
+  signalk:
+    image: signalk/signalk-server
+    ports:
+      - "3000:3000"
+      - "123:123/udp"
+    volumes:
+      - signalk:/home/node/.signalk/
+      - ./:/usr/lib/node_modules/signalk-ntp-server
+    environment:
+      - DEBUG=signalk-ntp-server
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        cd /home/node/.signalk/
+        npm link signalk-ntp-server
+        service dbus restart
+        /usr/sbin/avahi-daemon -k
+        /usr/sbin/avahi-daemon --no-drop-root &
+        /home/node/signalk/bin/signalk-server --securityenabled --sample-n2k-data
+    restart: always
+    network_mode: host
+  test:
+    image: test
+    build: .
+    entrypoint:
+      - /bin/sh
+      - -c
+      - |
+        while true; do
+          ntpdate -qd signalk
+          sleep 5
+        done
+volumes:
+  signalk:
