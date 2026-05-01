@@ -3,7 +3,7 @@
   "version": "1.0.2",
   "main": "index.js",
   "dependencies": {
-    "ntp-time": "2.0.8"
+    "ntp-time": "2.1.1"
   },
   "author": "Iuri Aranda <iuri.aranda@gmail.com>",
   "license": "MIT",
